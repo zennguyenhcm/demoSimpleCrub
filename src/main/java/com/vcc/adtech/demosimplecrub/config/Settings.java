@@ -20,8 +20,12 @@ public class Settings {
     private static volatile Settings instance = null;
 
     //  web config
-    public int PORT = 8001;
-    public String PREFIX_PATH = "";
+    public int MYSQL_PORT = 3306;
+    public String MYSQL_HOST="localhost";
+    public String MYSQL_DB_NAME="test";
+    public String MYSQL_USER="test";
+    public String MYSQL_PASSWORD="pw";
+    public int MYSQL_POOL_SIZE=2;
 
     public static Settings getInstance() {
         Settings result = instance;
