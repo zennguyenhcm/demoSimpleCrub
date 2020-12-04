@@ -30,7 +30,7 @@ public class MyCustomApplicationConfig implements WebServerFactoryCustomizer<Jet
 
     @Override
     public void customize(JettyServletWebServerFactory factory) {
-        factory.setPort(setting.MYSQL_PORT);
+        factory.setPort(setting.PORT);
     }
 
     @Bean

@@ -20,6 +20,7 @@ public class Settings {
     private static volatile Settings instance = null;
 
     //  web config
+    public int PORT = 9999;
     public int MYSQL_PORT = 3306;
     public String MYSQL_HOST="localhost";
     public String MYSQL_DB_NAME="test";
