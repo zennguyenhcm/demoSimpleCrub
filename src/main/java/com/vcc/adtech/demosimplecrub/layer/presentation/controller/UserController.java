@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/user")
 @RestController
 public class UserController {
-//    @PostMapping(path ="login", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-//    public ResponseEntity<String> logIn(@RequestBody LoginPayload loginPayload, HttpServletRequest request){
-//
-//    }
+    @PostMapping(path ="login", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<String> logIn(@RequestBody LoginPayload loginPayload, HttpServletRequest request){
+
+    }
 
 }

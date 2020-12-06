@@ -23,9 +23,9 @@ public class Settings {
     public int PORT = 9999;
     public int MYSQL_PORT = 3306;
     public String MYSQL_HOST="localhost";
-    public String MYSQL_DB_NAME="test";
-    public String MYSQL_USER="test";
-    public String MYSQL_PASSWORD="pw";
+    public String MYSQL_DB_NAME="apimanager";
+    public String MYSQL_USER="apimanager";
+    public String MYSQL_PASSWORD="password";
     public int MYSQL_POOL_SIZE=2;
 
     public static Settings getInstance() {

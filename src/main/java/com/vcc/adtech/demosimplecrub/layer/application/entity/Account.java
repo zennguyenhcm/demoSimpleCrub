@@ -7,7 +7,7 @@ public class Account {
     private String userID;
     private String email;
     private String password;
-    private int roleID;
+    private String role;
     private boolean isLogin =false;
     private boolean isActive=true;
 
@@ -36,11 +36,11 @@ public class Account {
         this.password = password;
     }
 
-    public int getRoleID() {
+    public String getRoleID() {
         return roleID;
     }
 
-    public void setRoleID(int roleID) {
+    public void setRoleID(String roleID) {
         this.roleID = roleID;
     }
 
