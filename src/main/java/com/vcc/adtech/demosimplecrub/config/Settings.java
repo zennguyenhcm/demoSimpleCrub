@@ -24,8 +24,8 @@ public class Settings {
     public int MYSQL_PORT = 3306;
     public String MYSQL_HOST="localhost";
     public String MYSQL_DB_NAME="apimanager";
-    public String MYSQL_USER="apimanager";
-    public String MYSQL_PASSWORD="password";
+    public String MYSQL_USER="root";
+    public String MYSQL_PASSWORD="phat123456";
     public int MYSQL_POOL_SIZE=2;
     public String MYSQL_ACCOUNT_TABLE="account";
 

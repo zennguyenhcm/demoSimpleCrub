@@ -1,6 +1,7 @@
 package com.vcc.adtech.demosimplecrub.layer.application.dao.impl;
 
 import com.vcc.adtech.demosimplecrub.config.Settings;
+import com.vcc.adtech.demosimplecrub.layer.application.AccountRowMapper;
 import com.vcc.adtech.demosimplecrub.layer.application.dao.IAccountDao;
 import com.vcc.adtech.demosimplecrub.layer.application.domain.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,24 @@ public class AccountDao implements IAccountDao {
         String sql = String.format("UPDATE %s SET is_login=? WHERE email=? AND password=?",
                 Settings.getInstance().MYSQL_ACCOUNT_TABLE);
         return mysqlJdbcWriteTemplate.update(sql, new Object[]{isLogin,email, password});
+    }
+
+    @Override
+    public int updateLogoutStatus(String email, String password, boolean isLogin) throws Exception
+
+    {
+        String sql =String.format("UPDATE %s SET is_login=? WHERE email=? AND password=?",
+                Settings.getInstance().MYSQL_ACCOUNT_TABLE);
+
+        return mysqlJdbcWriteTemplate.update(sql,new Object[]{isLogin,email,password});
+    }
+
+    @Override
+    public Account findAccountById(String id) throws Exception {
+        String sql =String.format("SELECT * FROM %s WHERE ID = ?",
+                Settings.getInstance().MYSQL_ACCOUNT_TABLE);
+
+        return mysqlJdbcWriteTemplate.queryForObject(sql,new Object[]{id},new AccountRowMapper());
+
     }
 }
