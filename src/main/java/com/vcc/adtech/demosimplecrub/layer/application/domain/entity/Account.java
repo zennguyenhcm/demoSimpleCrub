@@ -1,8 +1,5 @@
-package com.vcc.adtech.demosimplecrub.layer.application.entity;
+package com.vcc.adtech.demosimplecrub.layer.application.domain.entity;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Account {
     private String userID;
     private String email;
@@ -36,12 +33,12 @@ public class Account {
         this.password = password;
     }
 
-    public String getRoleID() {
-        return roleID;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoleID(String roleID) {
-        this.roleID = roleID;
+    public void setRoleID(String role) {
+        this.role = role;
     }
 
     public boolean isLogin() {

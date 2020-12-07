@@ -27,6 +27,7 @@ public class Settings {
     public String MYSQL_USER="apimanager";
     public String MYSQL_PASSWORD="password";
     public int MYSQL_POOL_SIZE=2;
+    public String MYSQL_ACCOUNT_TABLE="account";
 
     public static Settings getInstance() {
         Settings result = instance;

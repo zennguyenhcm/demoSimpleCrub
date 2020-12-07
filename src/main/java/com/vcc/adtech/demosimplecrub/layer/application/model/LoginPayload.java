@@ -1,17 +1,17 @@
 package com.vcc.adtech.demosimplecrub.layer.application.model;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.vcc.adtech.demosimplecrub.layer.application.entity.Account;
+import com.vcc.adtech.demosimplecrub.layer.application.domain.entity.Account;
 
 public class LoginPayload {
-    private ObjectNode accountInfo;
+    private Account accountInfo = new Account();
     private Long lastLoginTime;
 
-    public ObjectNode getAccountInfo() {
+    public Account getAccountInfo() {
         return accountInfo;
     }
 
-    public void setAccountInfo(ObjectNode accountInfo) {
+    public void setAccountInfo(Account accountInfo) {
         this.accountInfo = accountInfo;
     }
 
