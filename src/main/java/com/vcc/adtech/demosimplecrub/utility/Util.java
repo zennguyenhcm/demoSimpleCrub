@@ -15,6 +15,9 @@ import org.springframework.util.ClassUtils;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class Util {
     private static final Logger logger = LoggerFactory.getLogger(Util.class);
@@ -84,4 +87,17 @@ public class Util {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response.toString());
         }
     }
+
+    String url = "https://kenh14.vn/midu-tung-loat-anh-xinh-nhu-nang-tho-tiet-lo-thai-do-phu-tinh-cu-va-chuyen-hen-ho-giua-luc-duoc-day-thuyen-voi-chi-dan-20201208112101793.chn";
+	    Pattern p = Pattern.compile("[0-9]+.chn");
+	    Matcher m = p.matcher(url);
+	    if(m.find()) {
+	     // System.out.println(m.group());
+	    }
+	    String id = m.group().toString();
+	    Pattern pid = Pattern.compile("[0-9]+");
+	    Matcher mid = pid.matcher(id);
+	    if(mid.find()) {
+		      System.out.println(mid.group());
+		    }    
 }
