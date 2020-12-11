@@ -25,7 +25,7 @@ public class Settings {
     public String MYSQL_HOST="localhost";
     public String MYSQL_DB_NAME="apimanager";
     public String MYSQL_USER="root";
-    public String MYSQL_PASSWORD="phat123456";
+    public String MYSQL_PASSWORD="admin";
     public int MYSQL_POOL_SIZE=2;
     public String MYSQL_ACCOUNT_TABLE="account";
 

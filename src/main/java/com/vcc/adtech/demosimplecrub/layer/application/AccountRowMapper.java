@@ -17,9 +17,6 @@ public class AccountRowMapper implements RowMapper<Account> {
         account.setLogin(resultSet.getBoolean("is_login"));
         account.setLogin(resultSet.getBoolean("is_active"));
 
-
-
-
         return account;
     }
 }
